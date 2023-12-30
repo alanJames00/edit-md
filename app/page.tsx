@@ -9,10 +9,20 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
- 
+
+import { ThemeProvider } from '@/components/theme-provider';
+import { RecoilRoot } from 'recoil';
 
 export default function Home() {
   return (
+	<RecoilRoot>
+	<div>
+		<ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
 	<div>
 		<div>
 			<PageHeader />
@@ -23,20 +33,26 @@ export default function Home() {
     	  direction="horizontal"
     	  className="min-h-[200px] rounded-lg border">
 
-    	  <ResizablePanel defaultSize={100}>
+    	  <ResizablePanel defaultSize={50}>
     	    <div className="flex h-full ">
     	      <Editor />	
     	    </div>
     	  </ResizablePanel>
     	  <ResizableHandle withHandle />
-    	  <ResizablePanel defaultSize={75}>
+    	  <ResizablePanel defaultSize={50}>
     	    <div className="flex h-full p-6">
     	      
 			  <Viewer />
+			  
     	    </div>
     	  </ResizablePanel>
     	</ResizablePanelGroup>
 			</div>
+	
+	
 	</div>
+	</ThemeProvider>
+	</div>
+	</RecoilRoot>
   );
 }
