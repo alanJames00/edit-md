@@ -1,8 +1,10 @@
 import Markdown from "react-markdown";
+import { CodeState } from "../states/editor-state";
+import { useRecoilState } from "recoil";
 
 export default function Viewer() {
 
-    const markdown = '# Hi, **Pluto**!'
+    const [ code ] = useRecoilState(CodeState)
 
     return (
         <div>
@@ -15,7 +17,7 @@ export default function Viewer() {
                 h5: ({ children }) => <h5 className="text-lg font-bold">{children}</h5>,
                 h6: ({ children }) => <h6 className="text-base font-bold">{children}</h6>,
             }} >
-                {markdown}  
+                {code}  
                 
             </Markdown>
         </div>
