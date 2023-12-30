@@ -10,6 +10,7 @@ export default function Editor() {
         <CodeMirror
           value="console.log('hello world!');"
           height="600px"
+          minWidth='650px'
         />
         </div>
       );
