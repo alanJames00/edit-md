@@ -4,11 +4,14 @@ import React from 'react';
 import { CodeState } from '../states/editor-state';
 
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
+
+import { EditorThemeState } from '../states/editor-theme-state';
 
 export default function Editor() {
 
     const [code, setCode] = useRecoilState(CodeState)
+    const editorTheme = useRecoilValue(EditorThemeState)
 
     return (    
         <div>
@@ -17,6 +20,7 @@ export default function Editor() {
           onChange={(value) => setCode(value) }
           height="600px"
           minWidth='780px'
+          theme= {editorTheme}
           extensions={[markdown({ base: markdownLanguage })]}
         />
         </div>

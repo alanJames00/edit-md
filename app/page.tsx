@@ -19,7 +19,7 @@ export default function Home() {
 	<div>
 		<ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >

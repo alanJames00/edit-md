@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@codemirror/lang-markdown": "^6.2.3",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-slot": "^1.0.2",
+    "@uiw/codemirror-theme-copilot": "^4.21.21",
+    "@uiw/codemirror-theme-dracula": "^4.21.21",
     "@uiw/react-codemirror": "^4.21.21",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
