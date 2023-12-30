@@ -33,13 +33,13 @@ export default function Home() {
     	  direction="horizontal"
     	  className="min-h-[200px] rounded-lg border">
 
-    	  <ResizablePanel defaultSize={50}>
+    	  <ResizablePanel defaultSize={50} minSize={20}>
     	    <div className="flex h-full ">
     	      <Editor />	
     	    </div>
     	  </ResizablePanel>
     	  <ResizableHandle withHandle />
-    	  <ResizablePanel defaultSize={50}>
+    	  <ResizablePanel defaultSize={50} minSize={50}>
     	    <div className="flex h-full p-6">
     	      
 			  <Viewer />

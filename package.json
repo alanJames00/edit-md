@@ -9,12 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codemirror/lang-markdown": "^6.2.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@uiw/react-codemirror": "^4.21.21",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.303.0",
     "next": "14.0.4",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "react-resizable-panels": "^1.0.6",
+    "recoil": "^0.7.7",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7"
   },
