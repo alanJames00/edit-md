@@ -8,7 +8,12 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 
 import { EditorThemeState } from '../states/editor-theme-state';
 
-export default function Editor() {
+
+interface EditorProps {
+	editorWidth: number;
+}
+
+export default function Editor( { editorWidth } :EditorProps ) {
 
     const [code, setCode] = useRecoilState(CodeState)
     const editorTheme = useRecoilValue(EditorThemeState)

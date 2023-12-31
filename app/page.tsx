@@ -35,7 +35,7 @@ export default function Home() {
 
     	  <ResizablePanel defaultSize={50} minSize={20}>
     	    <div className="flex h-full ">
-    	      <Editor />	
+    	      <Editor editorWidth={10}/>	
     	    </div>
     	  </ResizablePanel>
     	  <ResizableHandle withHandle />
